@@ -1,10 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Standart } from './Standart/Standart'
-import { CreateCS } from './Standart/createCS'
 import { EditCS } from './Standart/EditCS'
 import { Premium } from './Premium/Premium'
-import { Add } from './Premium/add'
 import { Edit } from './Premium/edit'
 import { RutasReservas } from '../Reservas/RutasReservas'
 function RutasClient ()  {

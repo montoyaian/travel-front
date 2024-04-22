@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { DivAdd } from '../../../components/DivAdd'
-import { Divtable } from '../../../components/Divtable'
-import Pagination from '../../../components/Pagination'
 import { confirmation, sendrequest } from '../../../functions'
 import { Link } from 'react-router-dom'
 import image1 from '../../../assets/Imagenes/Oferta_premium.jpg'
