@@ -1,12 +1,12 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { Standart } from 'Standart/Standart.jsx'
-import { CreateCS } from 'Standart/createCS.jsx'
-import { EditCS } from 'Standart/EditCS.jsx'
-import { Premium } from 'Premium/Premium.jsx'
-import { Add } from 'Premium/add.jsx'
-import { Edit } from 'Premium/edit.jsx'
-import { RutasReservas } from 'Reservas/RutasReservas.jsx'
+import { Route, Routes } from '/react-router-dom'
+import { Standart } from '/Standart/Standart.jsx'
+import { CreateCS } from '/Standart/createCS.jsx'
+import { EditCS } from '/Standart/EditCS.jsx'
+import { Premium } from '/Premium/Premium.jsx'
+import { Add } from '/Premium/add.jsx'
+import { Edit } from '/Premium/edit.jsx'
+import { RutasReservas } from '/Reservas/RutasReservas.jsx'
 function RutasClient ()  {
   return (
     <div>
