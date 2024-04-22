@@ -1,21 +1,32 @@
-FROM node:18-alpine as BUILD_IMAGE
+# Use the official Node.js 16 image as the base image
+FROM node:16 AS build
 
-WORKDIR /app/react-app
+# Set the working directory in the container
+WORKDIR /app
 
-COPY package*.json .
+# Copy the package.json and package-lock.json files to the working directory
+COPY package.json package-lock.json ./
 
+# Install dependencies
 RUN npm install
 
+# Copy the rest of the application code
 COPY . .
 
-RUN npm run build 
+# Build the React app
+RUN npm run build
 
-FROM node:18-alpine as PRODUCTION_IMAGE
+# Use a lighter weight image for the production build
+FROM node:16-alpine AS production
 
+# Set the working directory in the container
+WORKDIR /app
 
-WORKDIR /app/react-app
+# Copy only the build output from the previous stage
+COPY --from=build /app/build ./build
 
-COPY --from=BUILD_IMAGE /app/react-app/dist/   /app/react-app/dist/
+# Install serve to serve the static site
+RUN npm install -g serve
 
 EXPOSE 8080
 
